@@ -1,0 +1,30 @@
+$margin: 10px;
+
+.box {
+    padding-right: 150px;
+}
+
+.label {
+    font-size: 12px;
+    color: #B5B5B5;
+    font-weight: bold;
+}
+
+.amount {
+    margin-top: $margin;
+    margin-bottom: $margin;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.orange {
+    color:#FF7600;
+}
+
+.green {
+    color:#01CE67;
+}
+
+.grey {
+    color:#353434;
+}

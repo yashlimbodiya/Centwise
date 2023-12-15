@@ -1,0 +1,68 @@
+/* ChartModal.module.scss */
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(18px); /* Add backdrop-filter for blurring effect */
+
+  &.visible {
+    display: flex;
+  }
+}
+
+.modalContent {
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid;
+  border-color: #01ce67;
+  min-height: 20vh;
+  height: auto;
+  width: 80%; /* Adjust the width as needed */
+  background-color: white;
+  position: relative; /* Ensure z-index works correctly */
+  z-index: 1; /* Set z-index to be above the blurred background */
+  display: flex; /* Use flex to align the charts side by side */
+  justify-content: space-around; /* Adjust as needed */
+  align-items: center; /* Adjust as needed */
+
+  .closeButton {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    padding: 2px 6px;
+
+    &:hover {
+      background-color: #b3b3b3;
+    }
+  }
+
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-top: 5%;
+    color: #0a0909; /* Initial text color */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Add transitions for both background-color and color */
+  }
+}
+
+.chartContainer {
+  width: 45%; /* Adjust the width as needed */
+  height: 500px;
+  margin: 10px; /* Adjust the margin as needed */
+
+  canvas {
+    max-width: 100%; /* Ensure the canvas doesn't exceed the container width */
+    max-height: 100%; /* Ensure the canvas doesn't exceed the container height */
+  }
+
+  @media (max-width: 768px) {
+    width: 100%; /* Full width on smaller screens */
+  }
+}

@@ -1,0 +1,225 @@
+/* // Define variables */
+/* // Reusable mixin for box shadow */
+/* // Define a mixin for button styles */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 998;
+}
+
+.userImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px 50px 50px 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modelBackground {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border: 2px solid #01ce67;
+  z-index: 1001;
+}
+
+.titleCloseBtn {
+  margin-top: -7%;
+  margin-right: -7%;
+  display: flex;
+  justify-content: flex-end;
+}
+.titleCloseBtn button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #8b8a8a;
+}
+.titleCloseBtn button:hover {
+  color: #000000;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  margin-top: 5%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-left: 35%;
+}
+
+.body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: larger;
+  margin-top: -6%;
+}
+.body .name p,
+.body .email p,
+.body .phone p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.editInput {
+  width: auto;
+  font-family: "Montserrat", sans-serif;
+  font-size: large;
+  width: auto;
+  border: 2px solid #01ce67;
+  border-radius: 5px;
+}
+
+.editInputContainer {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.editInputContainer:hover {
+  color: black;
+  background-color: whitesmoke;
+  border-color: #37fe9a;
+  cursor: text;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+}
+
+.editIcon {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+}
+.editIcon div {
+  font-family: "Montserrat", sans-serif;
+  font: normal normal 600 16px/19px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  border-radius: 0.7em;
+  font-size: 13px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background-size: 200% 200%;
+  background-color: #01ce67;
+  font-weight: bold;
+  height: 40px;
+  border: none;
+  border: 1px solid;
+  border-color: #02aa56;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  width: 11vh;
+  font-size: medium;
+  border: 1.5 px solid #00ad57;
+}
+.editIcon div:hover {
+  color: black;
+}
+
+.editButtons {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-around;
+}
+.editButtons .save,
+.editButtons .cancel {
+  font-family: "Montserrat", sans-serif;
+  font: normal normal 600 16px/19px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  border-radius: 0.7em;
+  font-size: 13px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  background-size: 200% 200%;
+  background-color: #01ce67;
+  font-weight: bold;
+  height: 40px;
+  border: none;
+  border: 1px solid;
+  border-color: #02aa56;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  width: 150px;
+}
+.editButtons .save.save,
+.editButtons .cancel.save {
+  margin-right: 5%;
+}
+.editButtons .save.cancel,
+.editButtons .cancel.cancel {
+  margin-right: -5%;
+}
+.editButtons .save:hover,
+.editButtons .cancel:hover {
+  color: black;
+  background-color: #01ce67;
+  border-color: #37fe9a;
+}
+.editButtons .save:focus,
+.editButtons .cancel:focus {
+  border-color: #019b4e;
+}
+
+.choosefile {
+  margin-left: -1em;
+  cursor: pointer;
+}
+
+.profilecancel {
+  background-color: #01ce67;
+  color: white;
+  padding: 3px 9px;
+  cursor: pointer;
+  margin-top: 1em;
+  border-radius: 5px;
+  border: none;
+  border: 1.5px solid;
+  border-color: #02aa56;
+  margin-left: 5px;
+}
+.profilecancel:hover {
+  color: black;
+}
+.profilecancel:focus {
+  border-color: #019b4e;
+}
+
+.saveButton {
+  background-color: #01ce67;
+  color: white;
+  padding: 3px 9px;
+  cursor: pointer;
+  margin-top: 1em;
+  border-radius: 5px;
+  border: none;
+  border: 1.5px solid;
+  border-color: #02aa56;
+  margin-left: -1.5em;
+}
+.saveButton:hover {
+  color: black;
+}/*# sourceMappingURL=MyProfileModal.module.css.map */

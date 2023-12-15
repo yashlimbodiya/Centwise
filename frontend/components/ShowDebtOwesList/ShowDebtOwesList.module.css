@@ -1,0 +1,34 @@
+.container {
+    margin: 20px;
+}
+
+.viewChartbtn {
+    border: 2px solid #707070;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    margin-left: 90%;
+    color: #707070;
+    font-weight: bold;
+}
+
+.flexContainer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexChild {
+    flex: 1;
+} 
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    color:#353434;
+    margin-bottom: 20px;
+}
+

@@ -1,0 +1,53 @@
+.expenseItem{
+    display: flex; 
+}
+
+.monthdate{
+    display: flex;
+    flex-direction: column;
+ 
+}
+.date{
+    font-size: 22px;
+    font-weight: bolder;
+    margin-top: -18px;
+
+}
+.icon{
+    margin-left: 12px;
+    height: 30px;
+    margin-top: 20px;
+}
+.dataExpense{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+}
+.expense{
+    margin-left: 20px;
+    font-weight: bolder;
+}
+.expense_type{
+    margin-left: 20px;
+    margin-top: -10px;
+    font-size: smaller;
+}
+.paid{
+    margin-left: -250px;
+   
+}
+.paidData
+{
+    margin-left: -250px;
+    font-weight: bolder;
+    
+}
+.lent{
+    margin-left: -120px;
+   
+}
+.lentData{
+    margin-left: -120px;
+    font-weight: bolder;
+    
+}

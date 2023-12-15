@@ -1,0 +1,230 @@
+/* .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: 998; 
+  }
+
+.modelBackground{
+
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    z-index: 1000; 
+}
+
+.modalContainer
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15vw;
+    height: 25vh;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 5px;
+    border: 2px solid #01ce67;
+    z-index: 1001
+}
+
+.titleCloseBtn{
+    margin-top: -7%;
+    margin-right: -7%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+.titleCloseBtn button{
+    background-color: transparent;
+    border: none;
+    font-size: 2.0rem;
+    cursor: pointer;
+    transform: rotate(45deg);
+}
+.titleCloseBtn button:hover{
+    color: rgb(252, 8, 8);
+}
+
+.heading{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-top:5%;
+    background-color: #01ce67;
+    color: whitesmoke;
+    padding-left:5%;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    margin-left: 35%;
+    
+}
+
+.body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: -6%;
+
+}
+
+.footer button{
+    box-shadow: 0px 3px 6px #00000029;
+    margin-top: 2%;
+    border-radius: 5px;
+
+}
+
+.email{
+    margin-top: 15px;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 5px;
+} */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    backdrop-filter: blur(5px); /* Blur effect for supporting browsers */
+    z-index: 998; /* Ensure the overlay is on top of other elements */
+  }
+
+.modelBackground{
+    position: relative; /* Make sure it's relative to allow absolute positioning of the modal */
+    display: flex;
+    justify-content: center;
+    z-index: 1000; 
+}
+
+.modalContainer
+{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 5px;
+    border: 2px solid #01ce67;
+    z-index: 1001;
+    padding: 2%;
+}
+
+.titleCloseBtn{
+    margin-top: -15%; 
+    margin-right: -12%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.titleCloseBtn button{
+    background-color: transparent;
+    border: none;
+    font-size: 2.0rem;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: red;
+    /* z-index: 1000; */
+}
+
+.heading{
+
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    width: auto;
+    /* margin-left: -9.3%; */
+    font-weight: 900;
+    /* margin-top: */
+    background-color: #01ce67;
+    color: whitesmoke;
+    border-radius: 8px;
+    padding: 5%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    margin-left: 35%;
+}
+
+.email{
+    margin-top: 5%;
+    box-shadow: 0px 1px 1px #00000029;
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    /* padding: 5%; */
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: auto;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.body :hover{
+    cursor: text;
+}
+
+.footer button{
+    /* box-shadow: 0px 3px 6px #00000029;
+    margin-top: 2%;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: 2px solid #01ce67;
+    padding: 5%; */
+
+  font-family: 'Montserrat', sans-serif;
+  font: normal normal 600 16px/19px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  border-radius: 0.7em;
+  border: 2px solid #ffffff;
+  font-size: 13px;
+  box-shadow: 0px 3px 6px #00000029;
+  /* margin-left: -80%; */
+  background-size: 200% 200%;
+  background-color: #01CE67;
+  font-weight: bold;
+  /* margin-right: 50px; */
+  height: 40px;
+  width: 150px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer :hover{
+    color: black;
+    background-color: #01ce67;
+    border-color:  #05fc80;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}

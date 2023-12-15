@@ -1,0 +1,42 @@
+
+/*card*/
+.card {
+    display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.imgRec { 
+    display: inline-block; 
+    position: relative; 
+    width: 30px; 
+    height: 30px; 
+    overflow: hidden; 
+    border: 3px solid #dcdcdc;
+    border-radius: 50%; 
+} 
+
+.imgRec img { 
+    width: auto; 
+    height: 100%; 
+    z-index: -2;
+}
+
+.username {
+    margin-left: 20px;
+    margin-right: 40px;
+    width: 200px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #353434;
+}
+
+.amount {
+    font-size: 12px;
+    font-weight: bold;
+    color: #353434;
+}
+

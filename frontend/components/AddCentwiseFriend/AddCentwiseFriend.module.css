@@ -1,0 +1,118 @@
+.modalContent {
+    margin-top: 50px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 80%;
+    min-width: 30%;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #01ce67;
+    z-index: 1001;
+    min-height: 20vh;
+    height: auto;
+    z-index: 1001;
+}
+
+.formHeading {
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.inputs{
+    margin-top: 10px;
+    width: 400px;
+    height: 35px;
+    border: 2px solid #B5B5B5;
+    border-radius: 5px;
+    text-indent: 15px;
+    margin-bottom: 10px;
+  }
+
+.inputs:focus,
+.inputs:focus-visible {
+  border: 2px solid #01CE67;
+}
+.inputs::placeholder{
+  color: #999; 
+  font-weight: bold;
+  /* font-style: italic; */
+  text-align: justify;
+  margin-left: 100px;
+}
+
+.add{
+    color: #f1f1f1;
+    border:2px solid #fff;
+    background-color:#01ce67;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 1em;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0px 3px 6px #00000029;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: bold;
+  }
+
+  .add:hover{
+    background-color: #fff;
+    border-color: #01ce67;
+    color: #01ce67;
+  }
+
+  .add:active{
+    background-color: #00CE67;
+    border-color: #fff;
+    color: #fff;
+  }
+
+  .cancel{
+  
+    border: 2px solid;
+    border-color: #B5B5B5;
+    border-radius: 10px;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #B5B5B5;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0px 3px 6px #00000029;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: bold;
+}
+.cancel:active{
+  border-color: #fff;
+  background-color: #B70019;
+  color: #fff;
+}
+.cancel:hover{
+  border-color: #fff;
+  background-color: #B70019;
+  color: #fff;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49,49,49,0.8);
+}

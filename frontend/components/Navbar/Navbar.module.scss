@@ -1,0 +1,98 @@
+$primary-color: #00CE67;
+$shadow-color: rgba(0, 0, 0, 0.1607843137);
+$border-radius: 10px;
+$nav-padding: 20px;
+$nav-margin-right: 80px;
+$user-container-margin-right: 50px;
+$logo-transition-duration: 0.3s;
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  padding: $nav-padding $nav-padding;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px $shadow-color;
+  border-radius: 0px 0px $border-radius $border-radius;
+  opacity: 1;
+  z-index: 2;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  margin: 0;
+
+  .navContainer {
+    margin-right: $nav-margin-right;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navBarList {
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .centwiseLogo {
+    width: 130px;
+    transition: width $logo-transition-duration ease;
+
+    &:hover {
+      width: 135px;
+    }
+  }
+
+  .userContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: $user-container-margin-right;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .userProfile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px 50px 50px 50px;
+    border: 2px solid $primary-color;
+  }
+
+  .userName {
+    margin-left: 20px;
+    font-weight: 900;
+    color: #353434;
+    font-size: 100%;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .verticalLine {
+    height: 30px;
+    width: 3px;
+    background-color: #000;
+    margin-right: $user-container-margin-right;
+  }
+
+  .dropdownMenu {
+    top: 100%;
+    position: relative;
+    right: $user-container-margin-right;
+  }
+}

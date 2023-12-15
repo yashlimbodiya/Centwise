@@ -1,0 +1,7 @@
+[{
+      "consumerKey":"ZBnetoZkRyjuJ97FSHiOmNAX6Lc4xIVrCwFkeZ7G",
+      "consumerSecret":"dmjNg944GUJ3Y3VRthSa9lJ0wkxcOony9f8G8O8U",
+      "apiKey":"iXImDYyUdvdr938XlGs63eLc0XswsL3Sqal3i9zL",
+      "tokenUrl":"https://secure.splitwise.com/oauth/token",
+      "authorizeUrl":"https://secure.splitwise.com/oauth/authorize"
+}]

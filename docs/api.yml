@@ -1,0 +1,370 @@
+openapi: "3.0.2"
+info:
+  title: CentWise
+  description: CentWise API for INFO-6150 final project based on the OpenAPI 3.0 specification.
+  version: 1.0.0
+tags:
+  - name: Dashboard
+    description: Dashboard of the specific user about the amounts that owed  
+  - name: User
+    description: User End Points
+  - name: Group
+    description: Group endpoints
+  - name: Expense
+    description: Expense of the users
+  - name: Transaction
+    description: Transaction made by the users to the another users
+paths:
+  /dashboard:
+    get:
+      tags:
+        - Dashboard
+      summary: Search users
+      parameters:
+        - name: user_id
+          in: query
+          description: get user by id
+          schema:
+            type: number
+        - name: group_id
+          in: query
+          description: get groups by group id
+          schema:
+            type: number
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/UserAndGroup"
+        "400":
+          description: Bad Request - No User Detail provided
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden - Requesting user does not have access to this data
+        "404":
+          description: User Not Found
+  /user:
+    post:
+      tags:
+        - User
+      summary: Create a new user
+      requestBody:
+        description: Required information to create a new user account
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: Bad Request
+    put:
+      tags:
+        - User
+      summary: Update user profile
+      description: (Complete update) the currently logged in user's profile
+      requestBody:
+        description: Required information to update a user account
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: Bad Request
+    patch:
+      tags:
+        - User
+      summary: Update user profile
+      description: (Partially update) the currently logged in user's profile
+      requestBody:
+        description: Required information to update a user account
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/User"
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: Bad Request
+  /user/{user_id}:
+    get:
+      tags:
+        - User
+      summary: Fetch a user profile
+      operationId: getUserById
+      parameters:
+        - name: user_id
+          in: path
+          description: ID of the user to return
+          required: true
+          schema:
+            type: number
+            format: uuid
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/User"
+        "400":
+          description: Bad Request - No user id provided
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden - Requesting user does not have access to this data
+        "404":
+          description: User Not Found
+  /users:
+    get:
+      tags:
+        - User
+      summary: Search users
+      parameters:
+        - name: name
+          in: query
+          description: Search users by name
+          schema:
+            type: string
+        - name: phone_number
+          in: query
+          description: Search users by Phone Number
+          schema:
+            type: number
+        - name: Email
+          in: query
+          description: Search users by email
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/User"
+        "400":
+          description: Bad Request - No User Detail provided
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden - Requesting user does not have access to this data
+        "404":
+          description: User Not Found
+  /group:
+    post:
+      tags:
+        - Group
+      summary: Create a new group
+      requestBody:
+        description: Required informatin to create group
+        required: true
+        content:
+            application/json:
+                schema:
+                    $ref: "#/components/schemas/Group"
+
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+  /group/{group_id}:
+    get:
+      tags:
+        - Group
+      summary: Get group by id
+      parameters:
+        - name: group_id
+          in: path
+          description: ID of the group to return
+          required: true
+          schema:
+            type: number
+            format: uuid
+      responses:
+        "200":
+          description: Successful Operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        "400":
+          description: Bad Request - No Group id provided
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden - Requesting user does not have access to this data
+        "404":
+          description: Group Not Found 
+    patch:
+      tags:
+        - Group
+      summary: Update Group details
+      parameters:
+        - name: group_id
+          in: path
+          description: ID of the group to return
+          required: true
+          schema:
+            type: number
+            format: uuid
+      requestBody:
+        description: Required information to update a Group
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Group"
+      responses:
+        "200":
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Group"
+        "400":
+          description: Bad Request
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden - Requesting user does not have access to this data
+        "404":
+          description: Group Not Found
+    delete:
+      tags:
+        - Group
+      summary: Delete group by id
+      operationId: deleteGroupById
+      parameters:
+        - name: group_id
+          in: path
+          description: ID of the group to delete
+          required: true
+          schema:
+            type: number
+            format: uuid
+      responses:
+        "204":
+          description: Success - No Content
+        "400":
+          description: Bad Request - No Group id provided
+        "401":
+          description: Unauthorized
+        "403":
+          description: Forbidden - Requesting user does not have access to this data
+        "404":
+          description: Group Not Found
+       
+components:
+  schemas:
+    User:
+      type: object
+      required:
+        - user_id
+        - f_name
+        - l_name
+        - user_name
+        - email
+        - password
+        - ph_number
+      properties:
+        user_id:
+          type: number
+          format: uuid
+          example: 93847293420392039934329
+          readOnly: true
+        f_name:
+          type: string
+          example: Manan
+        l_name:
+          type: string
+          example: Vijayvargiya
+        email:
+          type: string
+          format: email
+          example: vijayvargiya.m@northeastern.edu
+        password:
+          type: string
+          example: P@ssw0rd
+          writeOnly: true
+        ph_number:
+          type: number
+          example: 6693299138
+        createdAt:
+          type: string
+          format: date-time
+          example: "2023-011-10T09:12:33.001Z"
+          readOnly: true
+        updatedAt:
+          type: string
+          format: date-time
+          example: "2023-11-10T09:12:33.001Z"
+          readOnly: true
+    UserAndGroup:
+      type: object
+      required:
+        - user_id
+      properties:
+        user_id:
+          type: number
+          format: uuid
+          example: 93847293420392039934329
+          readOnly: true
+    Group:
+        type: object
+        required:
+          - group_id
+          - g_name
+          - g_description
+          - g_createdBy
+        properties:
+          group_id:
+            type: number
+            format: uuid
+            example: 034235483940239439
+            readOnly: true
+          g_name:
+            type: string
+            example: Northeastern University
+          g_description:
+            type: string
+            example: School Expenses
+          g_createdBy:
+            type: string
+            format: date-time
+            example: "2023-11-10T09:12:33.001Z"
+            readOnly: true

@@ -1,0 +1,19 @@
+.mainContainerHeading {
+  font-size: 140%;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.mainCard {
+  width: 65vw;
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 15px;
+  opacity: 1;
+  padding-top: 2%;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 30px;
+  margin-left: 5%;
+}/*# sourceMappingURL=MainContainer.module.css.map */

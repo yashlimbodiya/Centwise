@@ -1,0 +1,30 @@
+.mainContainer {
+	margin-bottom: 20px;
+}
+
+.container {
+    display: flex; 
+	flex-direction: row; 
+	flex-wrap: wrap;
+	margin-bottom: 40px; 
+}
+
+.summary {
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #353434;
+}
+
+.hr {
+	border: none;
+  	height: 1.5px;
+  	/* Set the hr color */
+  	background-color: #DCDCDC;  /* Modern Browsers */
+}
+
+.listCard {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}

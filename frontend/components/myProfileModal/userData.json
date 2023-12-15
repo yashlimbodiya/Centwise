@@ -1,0 +1,7 @@
+{
+    "person": {
+      "fullName": "John Doe",
+      "email": "john.doe@example.com",
+      "phoneNumber": "+1 (555) 123-4567"
+    }
+  }

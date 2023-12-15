@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+.container {
+  margin-top: 10%;
+  margin-right: 15%;
+  font-family: Montserrat;
+}
+
+.titleContent {
+  font-size: 3em;
+  text-wrap: balance;
+}
+
+.secondaryContent {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.buttonContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.login {
+  font-family: "Montserrat", sans-serif;
+  font: normal normal 600 16px/19px;
+  letter-spacing: 0px;
+  opacity: 1;
+  border-radius: 0.7em;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: 120px;
+  height: 40px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: #01CE67;
+}
+.login:hover {
+  background-color: hwb(0 100% 0%);
+  color: #01CE67;
+  border-color: #01CE67;
+}
+
+.signup {
+  font-family: "Montserrat", sans-serif;
+  font: normal normal 600 16px/19px;
+  letter-spacing: 0px;
+  opacity: 1;
+  border-radius: 0.7em;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  width: 120px;
+  height: 40px;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: #FF7600;
+}
+.signup:hover {
+  color: #FF7600;
+  border: 2px solid;
+  border-color: #FF7600;
+  background-color: #fff;
+  animation: none; /* Stop the animation on hover */
+}/*# sourceMappingURL=LandingPageLeftPanel.module.css.map */

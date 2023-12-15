@@ -1,0 +1,20 @@
+$primaryColor:#FFFFFF;
+.mainContainerHeading {
+    font-size: 140%;
+    font-weight: bold;
+    margin-top: 2%;
+    margin-left: 5%;
+}
+
+.mainCard {
+    width: 65vw;
+    background-color: $primaryColor;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    opacity: 1;
+    padding-top: 2%;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    padding-right: 30px;
+    margin-left: 5%;
+}

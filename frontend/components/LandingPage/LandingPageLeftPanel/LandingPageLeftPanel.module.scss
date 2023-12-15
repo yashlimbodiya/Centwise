@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+$primaryColor : #01CE67;
+$secondaryColor: #FF7600;
+@mixin buttons{
+    font-family: 'Montserrat', sans-serif;
+    font: normal normal 600 16px/19px;
+    letter-spacing: 0px;
+    opacity: 1;
+    border-radius: 0.7em;
+    box-shadow: 0px 3px 6px #00000029;
+    width: 120px;
+    height: 40px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container {
+    margin-top: 10%;
+    margin-right: 15%;
+    font-family: Montserrat;
+}
+
+.titleContent {
+    font-size: 3em;
+    text-wrap:balance;
+}
+
+.secondaryContent {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.buttonContainer {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;  
+    gap: 50px;  
+}
+
+.login {
+   @include buttons();
+    color: #fff;
+    border: 2px solid $secondaryColor;
+    background-color: #fff;
+    background-color:  $secondaryColor;
+
+    &:hover{
+        background-color: hwb(136 89% 0%);
+        color: $secondaryColor;
+        border-color:$secondaryColor;
+    }
+}
+
+.signup {
+   @include buttons();
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    background-color: $primaryColor;
+
+    &:hover{
+        color: $primaryColor;
+        border: 2px solid;
+        border-color:$primaryColor;
+        background-color: hwb(136 89% 0%);
+        animation: none; /* Stop the animation on hover */
+    }
+   
+}
+

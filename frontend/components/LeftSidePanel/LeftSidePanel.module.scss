@@ -1,0 +1,82 @@
+$primaryColor: #01ce67;
+$display: flex;
+
+
+.LeftPanel {
+  box-shadow: 0px 3px 6px #00000029;
+  height: 100vh;
+  width: 19vw;
+  background-color: #FFFFFF;
+  z-index: 1;
+  position: fixed;
+  margin-top: -4.5em;
+  position: absolute;
+}
+
+.LeftSideBarList {
+  padding: 10px;
+  position: relative;
+  width: 19.5vw;
+}
+
+.row {
+  margin-top: 20%;
+  display: $display;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bolder;
+  border-right: 10px solid transparent;
+  width: 90%;
+  position: relative;
+  transition: border 0.5s ease;
+  list-style: none;
+}
+
+.row.focused {
+  cursor: pointer;
+  color: $primaryColor;
+  border-color: $primaryColor;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.link {
+  text-decoration: none; /* Remove underline */
+  color: black;
+}
+
+.title {
+  margin-left: 8px; /* Add space between title and icons */
+}
+
+.focused .title {
+  /* Apply styles for focused state, if needed */
+}
+
+.mainDiv {
+  display: $display;
+  flex-direction: row;
+  align-items: center;
+  color: black;
+}
+
+.mainDiv:hover {
+  color: $primaryColor;
+}
+
+.LeftSideBarList {
+  list-style: none !important;
+}
+
+/* Adjust spacing between icons and title */
+.icon > :not(:last-child) {
+  margin-right: 8px;
+}
+

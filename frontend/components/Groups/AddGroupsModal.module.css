@@ -1,0 +1,208 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .modalContainer {
+    background: white;
+    padding: 3%;
+    padding-right: 5%;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 40%;
+} 
+
+
+.logo{
+    height: 30px;
+    width: 140px;
+}
+
+.header span{
+display: flex;
+justify-content: flex-end;
+margin-top: -8%;
+margin-right: -10%;
+
+}
+
+
+
+.close{
+    transform: rotate(-45deg);
+    color: rgb(252, 2, 2);
+    
+}
+
+.close :hover{
+color: rgba(249, 11, 11, 0.805);
+font-weight: 750;
+font-size: 1.5em;
+/* background-color: antiquewhite; */
+}
+
+.close span{
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+
+.myGrpShallBCalld{
+    color: black;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 20px;
+
+}
+
+.inputs{
+    margin-top: 10px;
+    width: 400px;
+    height: 35px;
+    border: 2px solid #B5B5B5;
+    border-radius: 5px;
+    text-indent: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+
+  }
+
+.inputs:focus,
+.inputs:focus-visible {
+  border: 2px solid #01CE67;
+}
+.inputs::placeholder{
+  color: #999; 
+  font-weight: bold;
+  /* font-style: italic; */
+  text-align: justify;
+  margin-left: 100px;
+}
+
+.memberList {
+    list-style: none;
+    
+}
+
+.members {
+    display: inline-block;
+    text-wrap: wrap;
+    border: 2px solid #FF7600;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #FF7600;
+    border-radius: 5px;
+    overflow-wrap: anywhere;
+    margin-bottom: 10px;
+}
+
+
+
+.save{
+    color: #ffffff;
+    border:2px solid #fff;
+    background-color:#01ce67;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-top: 1em;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0px 3px 6px #00000029;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-size: 1em;
+    font-weight: bold;
+    width: 60px;
+    width: 120px;
+  }
+
+  .save:hover{
+    background-color: #fff;
+    border-color: #01ce67;
+    color: #01ce67;
+  }
+
+.cancel{
+    width: 120px;
+    border: 2px solid;
+    border-color: #fd8292;
+    border-radius: 15px;
+    margin-left: 1em;
+    cursor: pointer;
+    color: #ff7789;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: #fff;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    font-weight: bold;
+    font-size: 1em;
+}
+.cancel:active{
+  border-color: #fff;
+  background-color: #B70019;
+  color: #fff;
+}
+.cancel:hover{
+  border-color: #fff;
+  background-color: #B70019;
+  color: #fff;
+}
+
+.addMembersButton {
+    border-style: solid;
+    border-color: #01ce67;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Montserrat;
+    background-color: #fff;
+    font-weight: bold;
+    color: #01ce67;
+    margin-left: 40px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+
+  }
+
+  .addMembersButton:hover{
+    border-color: #ffffff;
+    background-color: #01ce67;
+    color: #fff;
+    font-weight: bold;
+  } 
+
+  .addMembersButton:active{
+    border-color: #009c4e;
+    font-weight: bold;
+  }
+
+
+
+.addAPerson{
+    font-family:'Montserrat', sans-serif;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+

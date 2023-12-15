@@ -1,0 +1,26 @@
+[
+    {
+    "_id": 1,
+    "icon": "../../../public/images/YashLimbodiya.jpg",
+    "title": "New Hampshire Trip",
+    "You paid": "$304",
+    "You lent": "$506"
+    },
+
+    {
+    "_id": 2,
+    "icon": "../../../public/images/YashLimbodiya.jpg",
+    "title": "Boston Apartment",
+    "You paid": "$45",
+    "You lent": "$789"
+    },
+
+    {
+    "_id": 2,
+    "icon": "../../../public/images/YashLimbodiya.jpg",
+    "title": "Northeastern Project Expenses",
+    "You paid": "$32",
+    "You lent": "$5"
+    }
+
+]

@@ -1,0 +1,65 @@
+.GroupNameCard{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+.userProfile{
+    width: 35px;
+    height: 35px;  
+    padding: 10px;
+    border-radius: 50px;
+  }
+
+
+  .groupCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .horizontalLine {
+    position: absolute;
+    width: calc(100% - 10px); /* Adjust the width of the line */
+    border-bottom: 1px solid #232222; /* Define line properties */
+    bottom: 0;
+    left: 15px;
+  }
+
+  .justBeforeTheDp{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .groupDetails {
+    margin-left: 10px;
+  }
+
+  .groupName{
+    font-weight: 500;
+  }
+
+  .groupExpenses{
+    display: flex;
+    flex-direction: row;
+    margin-left: 250px;
+  }
+
+
+  .youPaid, 
+  .youLent{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+  
+  }
+
+  .paidAmount,
+  .lentAmount{
+    font-weight: 900;
+    font-size: larger;
+    margin-top: -15px;
+  }

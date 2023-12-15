@@ -1,0 +1,235 @@
+/* // Define variables */
+$primaryColor: #01ce67;
+$overlayBackground: rgba(0, 0, 0, 0.5);
+
+/* // Reusable mixin for box shadow */
+@mixin boxShadow {
+  box-shadow: 0px 3px 6px #00000029;
+}
+
+@mixin profileButtons{
+  background-color:$primaryColor;
+  color: white;
+  padding: 3px 9px;
+  cursor: pointer;
+  margin-top: 1em;
+  border-radius: 5px;
+  border:none;
+  border:  1.5px solid ;
+  border-color: #02aa56;
+}
+/* // Define a mixin for button styles */
+@mixin buttonStyle {
+  font-family: 'Montserrat', sans-serif;
+  font: normal normal 600 16px/19px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+  border-radius: 0.7em;
+  font-size: 13px;
+  @include boxShadow; // Reuse the mixin for box shadow
+  background-size: 200% 200%;
+  background-color: $primaryColor;
+  font-weight: bold;
+  height: 40px;
+  border: none;
+  border: 1px solid;
+  border-color: #02aa56;
+  transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $overlayBackground;
+  backdrop-filter: blur(5px);
+  z-index: 998;
+}
+
+.userImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px 50px 50px 50px;
+  object-fit: cover;
+}
+
+.modelBackground {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContainer {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  background-color: white;
+  @include boxShadow; // Use the mixin for box shadow
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border: 2px solid $primaryColor;
+  z-index: 1001;
+}
+
+.titleCloseBtn {
+  margin-top: -7%;
+  margin-right: -7%;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color:  #8b8a8a;
+   
+
+    &:hover {
+      color:  #000000;
+    }
+  }
+}
+
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  margin-top: 5%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-left: 35%;
+}
+
+.body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: larger;
+  margin-top: -6%;
+
+  .name,
+  .email,
+  .phone {
+    p {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+}
+
+.editInput {
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: large;
+  width: auto;
+  border:2px solid #01ce67;
+  border-radius: 5px;
+}
+
+.editInputContainer {
+  box-shadow: 0px 3px 6px #00000029;
+  width: fit-content;
+
+  &:hover {
+    color: black;
+    background-color: whitesmoke;
+    border-color: lighten($primaryColor, 20%); // Use Sass functions
+    cursor: text;
+    box-shadow: 0px 3px 6px #00000029;
+  }
+}
+
+.editIcon {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  
+ 
+
+  div {
+  
+    @include buttonStyle; // Reuse button styles with a mixin
+    width: 11vh;
+    font-size: medium;
+    border: 1.5 px solid  #00ad57;
+  &:hover {
+      color: black;
+    }
+
+   
+  }
+  
+}
+
+.editButtons {
+  display: flex;
+  cursor: pointer;
+  justify-content: space-around;
+
+  .save,
+  .cancel {
+    @include buttonStyle; // Reuse button styles with a mixin
+    width: 150px;
+
+    &.save {
+      margin-right: 5%;
+    }
+
+    &.cancel {
+      margin-right: -5%;
+    }
+
+    &:hover {
+      color: black;
+      background-color: $primaryColor;
+      border-color: lighten($primaryColor, 20%);
+    }
+
+    &:focus {
+      border-color: darken($primaryColor, 10%);
+    }
+  }
+}
+
+.choosefile {
+  
+    margin-left: -1em;
+    cursor: pointer;
+  
+}
+.profilecancel{
+ @include profileButtons();
+ margin-left: 5px;
+
+ &:hover{
+  color: black;
+
+ }
+ &:focus {
+  border-color: darken($primaryColor, 10%);
+}
+}
+.saveButton{
+  @include profileButtons();
+  margin-left: -1.5em; 
+  
+  &:hover{
+    color: black;
+
+   
+  
+   }
+  
+}

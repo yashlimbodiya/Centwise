@@ -1,0 +1,56 @@
+.mainContainer {
+	margin-bottom: 20px;
+}
+
+.summary {
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #353434;
+}
+
+
+.listCard {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.addFriendBtn {
+    font-family: 'Montserrat', sans-serif;
+    font: normal normal 600 16px/19px;
+    letter-spacing: 0px;
+    color: #FF7600;
+    opacity: 1;
+    border-radius: 0.7em;
+    border: 2px solid #FF7600;
+    font-size: 13px;
+    box-shadow: 0px 3px 6px #00000029;
+    background-size: 200% 200%;
+    background-color: #fff;
+    font-weight: bold;
+    margin-right: 50px;
+    height: 40px;
+    width: 150px;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+	margin-left: 75%;
+
+	
+  
+}
+
+.addFriendBtn:hover {
+    background-color:  #FF7600;
+    color: #fff;
+    border-color: #fff;
+  }
+
+  .heading {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 50px;
+  }
+
+  .hr {
+	margin-bottom: 50px;
+  }
