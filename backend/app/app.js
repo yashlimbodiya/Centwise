@@ -28,8 +28,7 @@ const initialize = (app) => {
   app.use(express.urlencoded({ extended: true }));
   app.use(cookieParse());
   // TODO: MongoDB connection
-  mongoose.connect('mongodb+srv://vijayvargiyam:neu!121510Boston@info-6150-mananv.64mywo5.mongodb.net/centWise-pre?retryWrites=true&w=majority');
-  //mongoose.connect('mongodb+srv://centwise:centwise12345@cluster0.fopmn2v.mongodb.net/centwise?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
+  // MongoDB connections --> refer local copy for further code
   const db = mongoose.connection;  
 
   app.use(session({
