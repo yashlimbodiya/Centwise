@@ -45,7 +45,7 @@ export const forgotPassword = async function (request, response) {
   console.log(request.body.email);
   const { email } = request.body;
   const AUTH_EMAIL= email;
-  const AUTH_PASS='ysws ukyp wkne qkpw';
+  const AUTH_PASS= ''; //For auth key refer to local code
   try {
     const { email } = request.body;
 
